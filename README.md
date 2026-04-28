@@ -1,47 +1,95 @@
-# Adafruit GFX Library ![Build Status](https://github.com/adafruit/Adafruit-GFX-Library/workflows/Arduino%20Library%20CI/badge.svg)
+# ❤️ Web-Based Heart Rate Monitoring System (ESP32 + IoT)
 
-This is the core graphics library for all our displays, providing a common set of graphics primitives (points, lines, circles, etc.). It needs to be paired with a hardware-specific library for each display device we carry (to handle the lower-level functions).
+## 📌 Overview
+This project is a real-time heart rate monitoring system using ESP32 and a pulse sensor.  
+It measures heart rate (BPM) from the fingertip and displays it on a live web page hosted by the ESP32.
 
-Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!
-
-Written by Limor Fried/Ladyada for Adafruit Industries.
-BSD license, check license.txt for more information.
-All text above must be included in any redistribution.
-
-Recent Arduino IDE releases include the Library Manager for easy installation. Otherwise, to download, click the DOWNLOAD ZIP button, uncompress and rename the uncompressed folder Adafruit_GFX. Confirm that the Adafruit_GFX folder contains Adafruit_GFX.cpp and Adafruit_GFX.h. Place the Adafruit_GFX library folder your ArduinoSketchFolder/Libraries/ folder. You may need to create the Libraries subfolder if its your first library. Restart the IDE.
-
-**You will also need to install the latest Adafruit BusIO library.** Search for "Adafruit BusIO" in the library manager, or install by hand from https://github.com/adafruit/Adafruit_BusIO
-
-# Useful Resources
-
-- Image2Code: This is a handy Java GUI utility to convert a BMP file into the array code necessary to display the image with the drawBitmap function. Check out the code at ehubin's GitHub repository: https://github.com/ehubin/Adafruit-GFX-Library/tree/master/Img2Code
-
-- drawXBitmap function: You can use the GIMP photo editor to save a .xbm file and use the array saved in the file to draw a bitmap with the drawXBitmap function. See the pull request here for more details: https://github.com/adafruit/Adafruit-GFX-Library/pull/31
-
-- 'Fonts' folder contains bitmap fonts for use with recent (1.1 and later) Adafruit_GFX. To use a font in your Arduino sketch, \#include the corresponding .h file and pass address of GFXfont struct to setFont(). Pass NULL to revert to 'classic' fixed-space bitmap font.
-
-- 'fontconvert' folder contains a command-line tool for converting TTF fonts to Adafruit_GFX header format.
-
-- You can also use [this GFX Font Customiser tool](https://github.com/tchapi/Adafruit-GFX-Font-Customiser) (_web version [here](https://tchapi.github.io/Adafruit-GFX-Font-Customiser/)_) to customize or correct the output from [fontconvert](https://github.com/adafruit/Adafruit-GFX-Library/tree/master/fontconvert), and create fonts with only a subset of characters to optimize size.
+The system provides real-time monitoring with a modern dashboard including BPM value, status indicator, and live graph.
 
 ---
 
-### Roadmap
+## 🚀 Features
+- Real-time heart rate monitoring (BPM)
+- Web-based dashboard hosted on ESP32
+- Live updating graph
+- Status indicator (Resting / Normal / Active / High Alert)
+- Optional LCD/OLED display support
 
-The PRIME DIRECTIVE is to maintain backward compatibility with existing Arduino sketches -- many are hosted elsewhere and don't track changes here, some are in print and can never be changed! This "little" library has grown organically over time and sometimes we paint ourselves into a design corner and just have to live with it or add progressively more ungainly workarounds.
+---
 
-**We are grateful for everyone's contributions, but pull requests for the following will NOT be merged:**
+## 🛠️ Components
+- ESP32
+- Pulse Sensor (KY-039 or similar)
+- OLED Display (Optional)
+- Jumper Wires
+- USB Power Supply
 
-- Additional or incompatible font formats (see Prime Directive above). There are already two formats and the code is quite bloaty there as it is. This also creates liabilities for tools and documentation. What's there isn't perfect but it does the job.
+---
 
-- Additional or incompatible bitmap formats, for similar reasons. It's getting messy.
+## 🔌 Circuit Connections
 
-- Adding background color to custom fonts to erase prior screen contents. The ONLY acceptable methods are to clear the area with a filled rect, or (to avoid flicker) draw text into a GFXcanvas1 and copy to screen with drawBitmap() w/background color. This is on purpose and by design. We've discussed this. Glyphs can overlap.
+### Pulse Sensor:
+- VCC → 5V / VIN (ESP32)
+- GND → GND
+- Signal → GPIO 35
 
-- Scrolling, whether hardware- or software-based. Such implementations tend to rely on hardware-specific features (not universally available), read access to the screen's framebuffer (ditto) and/or the addition of virtual functions in GFX which them must be added in *every* subclass, of which there are many. The GFX API is largely "set" at this point and this is just a limitation we live with now.
+### OLED (Optional):
+- VCC → 3.3V
+- GND → GND
+- SDA → GPIO 21
+- SCL → GPIO 22
+  
 
-- Please don't reformat code for the sake of reformatting code. The resulting large "visual diff" makes it impossible to untangle actual bug fixes from merely rearranged lines. clang-format will be the final arbiter.
+---
 
-- Please no more pentagram-drawing PRs. Any oddly-specific drawing functions can go in your own code and aren't helpful in a library context.
+## 💻 How It Works
+- Pulse sensor reads heartbeat signals from fingertip  
+- ESP32 processes signal and calculates BPM  
+- ESP32 hosts a web server  
+- Data is displayed live on browser dashboard  
 
-If you *must* have one of these features, consider creating a fork with the features required for your project...it's easy to keep synced with the upstream code.
+---
+
+## 🌐 Web Interface
+The web page shows:
+- Current BPM ❤️
+- Live graph 📊
+- Connection status 🟢
+
+---
+
+## ⚙️ Setup
+1. Install ESP32 board in Arduino IDE  
+2. Install required libraries (WiFi, WebServer, Wire, LiquidCrystal_I2C)  
+3. Upload code to ESP32  
+4. Set WiFi name and password in code  
+5. Open Serial Monitor to get IP address  
+6. Open IP in browser  
+
+---
+
+## 📊 BPM Status
+- Below 60 → Resting  
+- 60–100 → Normal  
+- 100–130 → Active  
+- Above 130 → High Alert
+  <img width="1915" height="963" alt="Screenshot 2026-04-21 213223" src="https://github.com/user-attachments/assets/d9568d77-adfe-4635-ba48-096e61907308" />
+  ---
+
+⭐ If you enjoyed this project or found it useful, don’t forget to star the repository! ⭐
+ ## 🧑‍💻 Author
+  
+- **Farida Ayman** → [GitHub Profile](https://github.com/FaridaAyman)  
+- **Nada Attia** → [GitHub Profile](https://github.com/NadaAttia04)  
+- **Rodina Ahmed** → [GitHub Profile](https://github.com/RodinaAhmed)
+
+---
+
+⭐ *If you like this project, don't forget to star the repository!*
+
+---
+
+
+
+---
+
