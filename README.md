@@ -90,3 +90,9 @@ This project is for educational purposes only and is not a medical device.
 - **Farida Ayman** → [GitHub Profile](https://github.com/FaridaAyman)  
 - **Nada Attia** → [GitHub Profile](https://github.com/NadaAttia04)  
 - **Rodina Ahmed** → [GitHub Profile](https://github.com/RodinaAhmed)
+
+---
+
+⭐ *If you like this project, don't forget to star the repository!*
+
+---
