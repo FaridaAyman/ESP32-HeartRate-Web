@@ -38,6 +38,7 @@ The system provides real-time monitoring with a modern dashboard including BPM v
 - GND → GND
 - SDA → GPIO 21
 - SCL → GPIO 22
+<img width="921" height="672" alt="image" src="https://github.com/user-attachments/assets/dc1ebec2-b779-4e85-9d96-06aee3cdb37f" />
 
 ---
 
