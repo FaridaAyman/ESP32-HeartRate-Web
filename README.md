@@ -74,17 +74,12 @@ The web page shows:
 - Above 130 → High Alert
   <img width="1915" height="963" alt="Screenshot 2026-04-21 213223" src="https://github.com/user-attachments/assets/bcef7057-6ed3-4dfe-8f72-0c76596f389e" />
 
-
----
-
-## ⚠️ Disclaimer
-This project is for educational purposes only and is not a medical device.
-
----
+-----
 
 ## 💡 Future Work
 - Mobile app integration
-  ⭐ If you enjoyed this project or found it useful, don’t forget to star the repository! ⭐
+##
+⭐ If you enjoyed this project or found it useful, don’t forget to star the repository! ⭐
  ## 🧑‍💻 Author
   
 - **Farida Ayman** → [GitHub Profile](https://github.com/FaridaAyman)  
