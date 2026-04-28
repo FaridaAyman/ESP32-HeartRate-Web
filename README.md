@@ -90,6 +90,3 @@ This project is for educational purposes only and is not a medical device.
 - **Farida Ayman** → [GitHub Profile](https://github.com/FaridaAyman)  
 - **Nada Attia** → [GitHub Profile](https://github.com/NadaAttia04)  
 - **Rodina Ahmed** → [GitHub Profile](https://github.com/RodinaAhmed)
-- Cloud data storage  
-- AI health prediction  
-- BLE support
