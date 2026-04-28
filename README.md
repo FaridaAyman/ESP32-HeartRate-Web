@@ -39,6 +39,7 @@ The system provides real-time monitoring with a modern dashboard including BPM v
 - SDA → GPIO 21
 - SCL → GPIO 22
   
+<img width="1024" height="748" alt="image" src="https://github.com/user-attachments/assets/e927f22b-23c2-4ee1-8b13-bbde8fec9cfc" />
 
 ---
 
@@ -89,7 +90,4 @@ The web page shows:
 
 ---
 
-
-
----
 
